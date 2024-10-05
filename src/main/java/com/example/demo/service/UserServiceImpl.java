@@ -23,7 +23,7 @@ public class UserServiceImpl implements UserService {
     }
     public String deleteUser( String username){
         userRepository.deleteByUsername(username);
-        return "User Deleted";
+        return "User Deletedftg";
     }
 
     public User getUser( String age ){
