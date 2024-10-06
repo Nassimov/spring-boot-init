@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "exemple",
+      "type": "com.example.demo.DemoConfiguration",
+      "sourceType": "com.example.demo.DemoConfiguration"
+    }
+  ],
+  "properties": [
+    {
+      "name": "exemple.var1",
+      "type": "java.lang.Integer",
+      "sourceType": "com.example.demo.DemoConfiguration"
+    },
+    {
+      "name": "exemple.var2",
+      "type": "java.lang.String",
+      "sourceType": "com.example.demo.DemoConfiguration"
+    }
+  ],
+  "hints": []
+}
