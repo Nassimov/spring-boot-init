@@ -22,6 +22,12 @@ public class DemoApplication {
 	}
 
 	@Bean
+	String getNassim(){
+		System.out.println("Nassim");
+		return "Hello Messi";
+	}
+
+	@Bean
 	ApplicationRunner applicationRunner(Environment environment) {
 		return args -> {
 			log.info("message from application.properties " + environment );

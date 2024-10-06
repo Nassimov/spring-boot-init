@@ -38,3 +38,11 @@ sudo systemctl restart postgresql
 
 
 Swagger link http://localhost:8080/swagger-ui/index.html
+
+
+
+
+
+
+
+add annotation , bean compononte configuration 

@@ -1,9 +1,12 @@
 package com.example.demo.controller;
 
+import com.example.demo.DemoConfiguration;
 import com.example.demo.model.User;
 import com.example.demo.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,17 +17,29 @@ import java.util.List;
  */
 @RestController
 public class HelloController {
+
+
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private DemoConfiguration demoConfiguration;
+
 
     /**
      * Hello string.
      *
      * @return the string
      */
+    @Value("${exemple.var1}")
+    private String greetingMessage;
+
+    @MyCustomAnnotation
     @GetMapping("/")
     public String hello() {
-        return "Hello World!";
+        final int dd =  demoConfiguration.getVar1();
+        final String ddd =  demoConfiguration.getVar2();
+        return "Hello World! "+ greetingMessage;
     }
 
     /**
