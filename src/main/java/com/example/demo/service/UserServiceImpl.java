@@ -10,6 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
+
     private final UserRepository userRepository;
 
     public UserServiceImpl(UserRepository userRepository) {
@@ -24,6 +25,11 @@ public class UserServiceImpl implements UserService {
     public String deleteUser( String username){
         userRepository.deleteByUsername(username);
         return "User Deletedftg";
+    }
+
+    @Override
+    public List<User> getUsersByAge(int age) {
+        return userRepository.getUsersByAge(age);
     }
 
     public User getUser( String age ){

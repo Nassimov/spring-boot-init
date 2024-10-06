@@ -9,4 +9,6 @@ public interface UserService {
     User getUser(String id);
     String addUser(User user);
     String deleteUser(String username);
+
+    List<User> getUsersByAge(int age);
 }

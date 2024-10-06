@@ -70,4 +70,16 @@ public class HelloController {
     public String deleteUser(@PathVariable  String username){
         return userService.deleteUser(username);
     }
+
+
+    /**
+     * Search users by age list.
+     *
+     * @param age the age
+     * @return the list of users
+     */
+    @GetMapping("/searchUsers")
+    public List<User> searchUsersByAge(@RequestParam int age) {
+        return userService.getUsersByAge(age);
+    }
 }
